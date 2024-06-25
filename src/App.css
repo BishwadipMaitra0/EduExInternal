@@ -1,0 +1,159 @@
+/* Global styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Form styles */
+.form {
+  background: rgba(164, 160, 160, 0.255);
+  /* Light grey background with 80% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Add a subtle shadow */
+  width: 100%;
+  /* Set a width for the form */
+  text-align: left;
+  /* Align text to the left */
+}
+
+.form .logo {
+  width: 150px;
+  /* Adjust the width as needed */
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form .input-group {
+  margin: 10px 0;
+}
+
+.form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+  display: block;
+  /* Set label text color to black */
+}
+
+.form .input-group input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: black;
+  /* Ensure input text color is black */
+  background-color: white;
+  /* White background for input fields */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+}
+
+.form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: darkblue;
+  cursor: pointer;
+  width: 100%;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+
+  /* Adjustments for large screens like laptops and smaller desktops */
+  .form {
+    width: 250px;
+    /* Decrease form width */
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Adjustments for medium screens like tablets */
+  .form {
+    width: 200px;
+    /* Further decrease form width */
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Adjustments for smaller screens like large smartphones and tablets */
+  .form {
+    width: 100%;
+    /* Full width for smaller screens */
+    padding: 10px;
+    /* Reduce padding */
+  }
+
+  .form .logo {
+    width: 120px;
+    /* Adjust logo size for smaller screens */
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Adjustments for smartphones */
+  .form {
+    padding: 10px;
+    /* Further reduce padding */
+  }
+
+  .form button {
+    padding: 8px 16px;
+    /* Adjust button padding for smaller screens */
+  }
+}

@@ -1,0 +1,37 @@
+/* ErrorHandler.css */
+
+.alert {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    animation: fadeInOut 1s ease-in-out;
+}
+
+.alert-success {
+    background-color: #4caf50;
+    /* Green */
+    color: #fff;
+    /* White text */
+}
+
+.alert-error {
+    background-color: #f44336;
+    /* Red */
+    color: #fff;
+    /* White text */
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

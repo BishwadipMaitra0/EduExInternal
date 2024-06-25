@@ -1,0 +1,72 @@
+body {
+    color: black;
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin: 10px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5683b3;
+    /* Initial light blue color */
+    color: rgb(169, 214, 229);
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1e5086;
+    /* Darker blue color on hover */
+}
+
+@media (max-width: 576px) {
+
+    /* Adjustments for smartphones */
+    .login-container {
+        width: 90%;
+    }
+
+    .input-group input {
+        width: calc(100% - 40px);
+        /* Further decrease input width */
+    }
+
+    button {
+        padding: 8px 12px;
+        /* Further adjust button padding */
+    }
+}
