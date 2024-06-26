@@ -1,37 +1,44 @@
-/* ErrorHandler.css */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
 
 .alert {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    font-size: 1.5em;
+    /* Bigger font size */
     font-weight: bold;
-    animation: fadeInOut 1s ease-in-out;
+    /* Bolder font */
+    animation: fadeIn 0.5s ease-out, fadeOut 2s ease-out 1.5s;
 }
 
 .alert-success {
-    background-color: #4caf50;
-    /* Green */
-    color: #fff;
-    /* White text */
+    color: green;
 }
 
 .alert-error {
-    background-color: #f44336;
-    /* Red */
-    color: #fff;
-    /* White text */
+    color: #8B0000;
+    /* Blood red color */
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+.alert-fade-out {
+    opacity: 0;
 }

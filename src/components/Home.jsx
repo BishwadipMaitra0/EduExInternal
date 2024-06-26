@@ -1,11 +1,11 @@
-// Home.jsx
-
 import { useState, useEffect } from 'react';
-import Ip from './IpHandle'; // Assuming Ip.jsx is in the same directory
+import Ip from './IpHandle'; 
 import ErrorHandler from './ErrorHandler';
 import './home.css';
+import './styles.css';
 import axios from 'axios';
 import logo from '../assets/logo.png';
+import Footer from './Footer';
 
 const customEncode = (string, secretKey) => {
     let result = '';
@@ -34,6 +34,7 @@ const Home = () => {
     const [ip, setIP] = useState('');
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
+    const [loginData, setLoginData] = useState(null);
 
     useEffect(() => {
         // Store email, password, and IP in session storage whenever they change
@@ -57,6 +58,7 @@ const Home = () => {
         };
 
         console.log("Login Data: ", loginData);
+        setLoginData(loginData); // Set login data to state
 
         try {
             const response = await axios.post('https://edu-explorer.com/api/user-login.php', loginData, {
@@ -76,10 +78,14 @@ const Home = () => {
         }
     };
 
+    const clearResponse = () => {
+        setResponse(null);
+    };
+
     return (
         <div className="App">
             <div className="login-container">
-            <img src={logo} alt="Logo" className="logo" />
+                <img src={logo} alt="Logo" className="logo" />
                 <h2>Login</h2>
                 <form className='form-grp' onSubmit={handleLogin}>
                     <div className="input-group">
@@ -106,17 +112,13 @@ const Home = () => {
                     <button type="submit">Login</button>
                 </form>
                 {error && <div className="error-message">{error}</div>}
-                {response && <ErrorHandler response={response} />}
+                {response && <ErrorHandler response={response} clearResponse={clearResponse} />}
             </div>
-            <Footer />
+            
         </div>
     );
 };
 
-const Footer = () => (
-    <footer className="footer">
-        <p></p>
-    </footer>
-);
+
 
 export default Home;

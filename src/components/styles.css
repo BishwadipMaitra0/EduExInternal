@@ -1,0 +1,113 @@
+/* Base styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Responsive typography */
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+p {
+    font-size: 1em;
+}
+
+/* Responsive input fields */
+input[type="email"],
+input[type="password"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Responsive media queries */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .container {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    button {
+        padding: 8px;
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 3px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    button {
+        padding: 6px;
+        margin: 6px 0;
+    }
+}

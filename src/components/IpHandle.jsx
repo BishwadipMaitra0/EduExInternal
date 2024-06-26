@@ -8,21 +8,13 @@ const IpHandle = ({ setIP }) => {
                 const res = await axios.get("https://api.ipify.org/?format=json");
                 console.log(res.data);
                 setIP(res.data.ip);
-                sendIPToBackend(res.data.ip);
+                
             } catch (error) {
                 console.error("Error fetching the IP address:", error);
             }
         };
 
-        // const sendIPToBackend = async (ip) => {
-        //     try {
-        //         const res = await axios.post("https://edu-explorer.com/api/save-ip.php", { ip });
-        //         console.log("Response from backend:", res.data);
-        //         console.log(`The IP: ${ip}`);
-        //     } catch (error) {
-        //         console.error("Error sending IP to the backend:", error);
-        //     }
-        // };
+        
 
         getData();
     }, [setIP]);
